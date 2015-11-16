@@ -110,6 +110,7 @@ set(LIB_SRC
 	util/testharness
 	util/testutil
 	util/status
+	db/c
 	db/builder
 	db/dbformat
 	db/db_impl
@@ -124,7 +125,6 @@ set(LIB_SRC
 	db/version_edit
 	db/version_set
 	db/write_batch
-	helpers/memenv/memenv
    )
 add_library(fastleveldbShared SHARED ${LIB_SRC}) 
 target_link_libraries(fastleveldbShared pthread)
@@ -143,3 +143,9 @@ target_link_libraries(dbutil fastleveldbStatic)
 
 install(TARGETS fastleveldbShared fastleveldbStatic LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
 install(DIRECTORY include/fastleveldb DESTINATION include)
+
+#for test
+
+add_subdirectory(db)
+add_subdirectory(util)
+add_subdirectory(table)

@@ -1,0 +1,5 @@
+add_executable(filter_block_test filter_block_test.cc) 
+target_link_libraries(filter_block_test fastleveldbStatic)
+
+add_executable(table_test table_test.cc) 
+target_link_libraries(table_test fastleveldbStatic)

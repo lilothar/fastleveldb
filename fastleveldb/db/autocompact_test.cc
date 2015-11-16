@@ -2,9 +2,9 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
-#include "leveldb/db.h"
+#include "fastleveldb/db.h"
 #include "db/db_impl.h"
-#include "leveldb/cache.h"
+#include "fastleveldb/cache.h"
 #include "util/testharness.h"
 #include "util/testutil.h"
 
